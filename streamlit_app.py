@@ -268,9 +268,6 @@ st.write(
 How many days a video stays viral.
 """
 )
-uploaded_file = st.file_uploader("Upload CSV", type=".csv")
-
-
 # If CSV is not uploaded and checkbox is filled, use values from the example file
 # and pass them down to the next if block
 uploaded_file = "youtube_data.csv"
