@@ -265,7 +265,7 @@ def calculate_significance(
 st.write(
 """
 # 📊 YouTube Trend Analytics
-How many days a video stays viral.
+How many days a video stays viral?
 """
 )
 # If CSV is not uploaded and checkbox is filled, use values from the example file
