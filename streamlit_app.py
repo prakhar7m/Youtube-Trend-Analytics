@@ -263,19 +263,13 @@ def calculate_significance(
 
 
 st.write(
-    """
+"""
 # 📊 YouTube Trend Analytics
 How many days a video stays viral.
 """
 )
 uploaded_file = st.file_uploader("Upload CSV", type=".csv")
 
-"""use_example_file = st.checkbox(
-    "Use example file", False, help="Use in-built example file to demo the app"
-)
-
-ab_default = None
-result_default = None"""
 
 # If CSV is not uploaded and checkbox is filled, use values from the example file
 # and pass them down to the next if block
