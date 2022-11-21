@@ -268,7 +268,6 @@ st.write(
 How many days a video stays viral.
 """
 )
-
 uploaded_file = st.file_uploader("Upload CSV", type=".csv")
 
 """use_example_file = st.checkbox(
