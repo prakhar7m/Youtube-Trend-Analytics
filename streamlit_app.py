@@ -271,28 +271,21 @@ How many days a video stays viral.
 
 uploaded_file = st.file_uploader("Upload CSV", type=".csv")
 
-use_example_file = st.checkbox(
+"""use_example_file = st.checkbox(
     "Use example file", False, help="Use in-built example file to demo the app"
 )
 
 ab_default = None
-result_default = None
+result_default = None"""
 
 # If CSV is not uploaded and checkbox is filled, use values from the example file
 # and pass them down to the next if block
-if use_example_file:
-    uploaded_file = "Website_Results.csv"
-    ab_default = ["variant"]
-    result_default = ["converted"]
+uploaded_file = "youtube-data.csv"
+df = pd.read_csv(uploaded_file)
+st.markdown("### Data preview")
+st.dataframe(df.head())
 
-
-if uploaded_file:
-    df = pd.read_csv(uploaded_file)
-
-    st.markdown("### Data preview")
-    st.dataframe(df.head())
-
-    st.markdown("### Select columns for analysis")
+   """ st.markdown("### Select columns for analysis")
     with st.form(key="my_form"):
         ab = st.multiselect(
             "A/B column",
@@ -428,3 +421,4 @@ if uploaded_file:
         .applymap(style_negative, props="color:red;")
         .apply(style_p_value, props="color:red;", axis=1, subset=["p-value"])
     )
+"""
