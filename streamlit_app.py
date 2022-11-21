@@ -6,7 +6,7 @@ from scipy.stats import norm
 import altair as alt
 
 st.set_page_config(
-    page_title="A/B Testing App", page_icon="📊", initial_sidebar_state="expanded"
+    page_title="YouTube Trend Analytics", page_icon="📊", initial_sidebar_state="expanded"
 )
 
 
