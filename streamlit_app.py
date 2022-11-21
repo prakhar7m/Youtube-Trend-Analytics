@@ -278,7 +278,7 @@ st.dataframe(df.head())
 app_file = "application_data.csv"
 df_2 = pd.read_csv(app_file)
 st.markdown("### Final Data preview")
-st.dataframe(df.head())
+st.dataframe(df_2.head())
 
 
 st.line_chart(data=df_2, x='published_hour',y='predicted_trending_days')
