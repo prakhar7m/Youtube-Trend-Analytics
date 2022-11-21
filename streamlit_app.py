@@ -274,3 +274,8 @@ uploaded_file = "youtube_data.csv"
 df = pd.read_csv(uploaded_file)
 st.markdown("### Data preview")
 st.dataframe(df.head())
+
+app_file = "application_data.csv"
+df = pd.read_csv(app_file)
+st.markdown("### Final Data preview")
+st.dataframe(df.head())
