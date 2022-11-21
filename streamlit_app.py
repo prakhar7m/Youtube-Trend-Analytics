@@ -272,7 +272,7 @@ How many days a video stays viral?
 # and pass them down to the next if block
 uploaded_file = "youtube_data.csv"
 df = pd.read_csv(uploaded_file)
-st.markdown("### Data preview")
+st.markdown("### Initial Data preview")
 st.dataframe(df.head())
 
 app_file = "application_data.csv"
