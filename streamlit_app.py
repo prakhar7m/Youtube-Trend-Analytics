@@ -276,6 +276,10 @@ st.markdown("### Initial Data preview")
 st.dataframe(df.head())
 
 app_file = "application_data.csv"
-df = pd.read_csv(app_file)
+df_2 = pd.read_csv(app_file)
 st.markdown("### Final Data preview")
 st.dataframe(df.head())
+
+
+st.line_chart(df_2.predicted_trending_days)
+hour_to_filter=st.slider('published_hour',0,23,12)
