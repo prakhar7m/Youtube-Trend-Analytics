@@ -280,7 +280,7 @@ result_default = None"""
 
 # If CSV is not uploaded and checkbox is filled, use values from the example file
 # and pass them down to the next if block
-uploaded_file = "youtube-data.csv"
+uploaded_file = "youtube_data.csv"
 df = pd.read_csv(uploaded_file)
 st.markdown("### Data preview")
 st.dataframe(df.head())
