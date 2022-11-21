@@ -264,8 +264,8 @@ def calculate_significance(
 
 st.write(
     """
-# 📊 A/B Testing App
-Upload your experiment results to see the significance of your A/B test.
+# 📊 YouTube Trend Analytics
+How many days a video stays viral.
 """
 )
 
