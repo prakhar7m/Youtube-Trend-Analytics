@@ -283,8 +283,7 @@ uploaded_file = "youtube_data.csv"
 df = pd.read_csv(uploaded_file)
 st.markdown("### Data preview")
 st.dataframe(df.head())
-
-   """ st.markdown("### Select columns for analysis")
+""" st.markdown("### Select columns for analysis")
     with st.form(key="my_form"):
         ab = st.multiselect(
             "A/B column",
