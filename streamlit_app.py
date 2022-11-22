@@ -309,7 +309,7 @@ st.markdown(f"### Number of views vs {feature_selected}")
 
 # selectbox for selecting which state to plot
 #feature_selected3 = st.selectbox('Select feature to view', features, index=(0))
-chart = alt.Chart(df_2).mark_line().encode(
+chart = alt.Chart(df_2).mark_point().encode(
             x=alt.X(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)),
             y=alt.Y('view_count'))
 st.altair_chart(chart, use_container_width=True)
