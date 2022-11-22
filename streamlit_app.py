@@ -283,7 +283,7 @@ st.dataframe(df_2.head())
 st.markdown("### Make a selection vs Month OR hour :")
 
 # grab list of states from the dataframe
-features= ['published_hour', 'published_month']
+features= ['published_hour', 'published_month','likes','view_count','comment_count','dislikes']
 
 # selectbox for selecting which state to plot
 feature_selected = st.selectbox('Select feature to view', features, index=(0))
@@ -292,24 +292,8 @@ st.markdown(f"### Number of days the video stayed trending vs {feature_selected}
 
 import altair as alt
 chart = alt.Chart(df_2).mark_bar().encode(
-            x=alt.X(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)),
-            y=alt.Y('predicted_trending_days'))
+            x=alt.X('predicted_trending_days'),
+            y=alt.Y(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)))
+
 st.altair_chart(chart, use_container_width=True)
 
-st.markdown(f"### Number of likes vs {feature_selected}")
-
-# selectbox for selecting which state to plot
-#feature_selected2 = st.selectbox('Select feature to view', features, index=(0))
-chart = alt.Chart(df_2).mark_line().encode(
-            x=alt.X(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)),
-            y=alt.Y('likes'))
-st.altair_chart(chart, use_container_width=True)
-
-st.markdown(f"### Number of views vs {feature_selected}")
-
-# selectbox for selecting which state to plot
-#feature_selected3 = st.selectbox('Select feature to view', features, index=(0))
-chart = alt.Chart(df_2).mark_point().encode(
-            x=alt.X(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)),
-            y=alt.Y('view_count'))
-st.altair_chart(chart, use_container_width=True)
