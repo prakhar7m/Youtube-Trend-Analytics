@@ -291,7 +291,7 @@ feature_selected = st.selectbox('Select feature to view', features, index=(0))
 st.markdown(f"### Number of days the video stayed trending vs {feature_selected}")
 
 import altair as alt
-chart = alt.Chart(df_2).mark_line().encode(
+chart = alt.Chart(df_2).mark_bar().encode(
             x=alt.X(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)),
             y=alt.Y('predicted_trending_days'))
 st.altair_chart(chart, use_container_width=True)
