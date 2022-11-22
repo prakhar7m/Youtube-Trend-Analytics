@@ -281,4 +281,8 @@ st.markdown("### Final Data preview")
 st.dataframe(df_2.head())
 
 
-st.line_chart(df_2[['likes','predicted_trending_days']])
+import altair as alt
+chart = alt.Chart(df_2).mark_line().encode(
+            x=alt.X('likes', axis=alt.Axis(labelOverlap="greedy",grid=False)),
+            y=alt.Y('predicted_trending_days'))
+st.altair_chart(chart, use_container_width=True)
