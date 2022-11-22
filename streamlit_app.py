@@ -281,11 +281,7 @@ st.markdown("### Final Data preview")
 st.dataframe(df_2.head())
 
 
-st.bar_chart(df_2['published_hour'], df_2['predicted_trending_days'])
-hour_to_filter=st.slider('published_hour',0,23,12)
+c = alt.Chart(df_2, title='measure of different elements over time').mark_line().encode(
+     x='published_hour', y='predicted_trending_days', color='parameter')
 
-bar_chart = alt.Chart(df_2).mark_bar().encode(
-        y='predicted_trending_days',
-        x='published_hour'
-)
-st.altair_chart(bar_chart, use_container_width=True)
+st.altair_chart(c, use_container_width=True)
