@@ -294,16 +294,16 @@ chart = alt.Chart(df_2).mark_line().encode(
 st.altair_chart(chart, use_container_width=True)
 
 # selectbox for selecting which state to plot
-feature_selected = st.selectbox('Select feature to view', features, index=(0))
+feature_selected2 = st.selectbox('Select feature to view', features, index=(0))
 chart = alt.Chart(df_2).mark_line().encode(
-            x=alt.X(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)),
+            x=alt.X(feature_selected2, axis=alt.Axis(labelOverlap="greedy",grid=False)),
             y=alt.Y('likes'))
 st.altair_chart(chart, use_container_width=True)
 
 
 # selectbox for selecting which state to plot
-feature_selected = st.selectbox('Select feature to view', features, index=(0))
+feature_selected3 = st.selectbox('Select feature to view', features, index=(0))
 chart = alt.Chart(df_2).mark_line().encode(
-            x=alt.X(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)),
+            x=alt.X(feature_selected3, axis=alt.Axis(labelOverlap="greedy",grid=False)),
             y=alt.Y('view_count'))
 st.altair_chart(chart, use_container_width=True)
