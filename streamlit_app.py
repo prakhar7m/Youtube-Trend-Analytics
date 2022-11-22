@@ -281,4 +281,4 @@ st.markdown("### Final Data preview")
 st.dataframe(df_2.head())
 
 
-st.line_chart(df_2.likes,df_2.predicted_trending_days)
+st.line_chart(df_2[['likes','predicted_trending_days']])
