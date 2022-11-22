@@ -281,5 +281,5 @@ st.markdown("### Final Data preview")
 st.dataframe(df_2.head())
 
 
-st.line_chart(df_2, x="published_hour", y="predicted_trending_days")
+st.bar_chart(df_2, x="published_hour", y="predicted_trending_days")
 hour_to_filter=st.slider('published_hour',0,23,12)
