@@ -288,7 +288,7 @@ features= ['published_hour', 'published_month']
 # selectbox for selecting which state to plot
 feature_selected = st.selectbox('Select feature to view', features, index=(0))
 
-st.markdown(f"### Number of days the video stayed trending vs {}",feature_selected)
+st.markdown(f"### Number of days the video stayed trending vs {feature_selected}")
 
 import altair as alt
 chart = alt.Chart(df_2).mark_line().encode(
