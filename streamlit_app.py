@@ -280,7 +280,7 @@ df_2 = pd.read_csv(app_file)
 st.markdown("### Final Data preview")
 st.dataframe(df_2.head())
 
-st.markdown("### Make a selection vs Month and hour :")
+st.markdown("### Make a selection vs Month OR hour :")
 
 # grab list of states from the dataframe
 features= ['published_hour', 'published_month']
@@ -288,7 +288,7 @@ features= ['published_hour', 'published_month']
 # selectbox for selecting which state to plot
 feature_selected = st.selectbox('Select feature to view', features, index=(0))
 
-st.markdown("### Number of days the video stayed trending vs Month(OR)Hour :")
+st.markdown(f"### Number of days the video stayed trending vs {}",feature_selected)
 
 import altair as alt
 chart = alt.Chart(df_2).mark_line().encode(
