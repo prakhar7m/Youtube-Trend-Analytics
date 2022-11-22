@@ -281,7 +281,4 @@ st.markdown("### Final Data preview")
 st.dataframe(df_2.head())
 
 
-c = alt.Chart(df_2, title='measure of different elements over time').mark_line().encode(
-     x='published_hour', y='predicted_trending_days', color='parameter')
-
-st.altair_chart(c, use_container_width=True)
+st.line_chart(df_2.predicted_trending_days)
