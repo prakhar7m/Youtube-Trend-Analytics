@@ -281,7 +281,7 @@ st.markdown("### Final Data preview")
 st.dataframe(df_2.head())
 
 # grab list of states from the dataframe
-features= ['published_hour', 'likes', 'comment_count', 'view_count' , 'published_month'
+features= ['published_hour', 'likes', 'comment_count', 'view_count' , 'published_month']
 
 # selectbox for selecting which state to plot
 feature_selected = st.selectbox(‘Select feature to view’, features, index=(53))
