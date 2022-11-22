@@ -296,7 +296,7 @@ chart = alt.Chart(df_2).mark_line().encode(
             y=alt.Y('predicted_trending_days'))
 st.altair_chart(chart, use_container_width=True)
 
-st.markdown("### Number of likes vs Month(OR)Hour :")
+st.markdown(f"### Number of likes vs {feature_selected}")
 
 # selectbox for selecting which state to plot
 #feature_selected2 = st.selectbox('Select feature to view', features, index=(0))
@@ -305,7 +305,7 @@ chart = alt.Chart(df_2).mark_line().encode(
             y=alt.Y('likes'))
 st.altair_chart(chart, use_container_width=True)
 
-st.markdown("### Number of views vs Month(OR)Hour :")
+st.markdown(f"### Number of views vs {feature_selected}")
 
 # selectbox for selecting which state to plot
 #feature_selected3 = st.selectbox('Select feature to view', features, index=(0))
