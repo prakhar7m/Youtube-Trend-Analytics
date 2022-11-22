@@ -280,9 +280,15 @@ df_2 = pd.read_csv(app_file)
 st.markdown("### Final Data preview")
 st.dataframe(df_2.head())
 
+# grab list of states from the dataframe
+features= ['published_hour', 'likes', 'comment_count', 'view_count' , 'published_month'
+
+# selectbox for selecting which state to plot
+feature_selected = st.selectbox(‘Select feature to view’, features, index=(53))
+
 
 import altair as alt
 chart = alt.Chart(df_2).mark_line().encode(
-            x=alt.X('likes', axis=alt.Axis(labelOverlap="greedy",grid=False)),
+            x=alt.X(feature_selected, axis=alt.Axis(labelOverlap="greedy",grid=False)),
             y=alt.Y('predicted_trending_days'))
 st.altair_chart(chart, use_container_width=True)
