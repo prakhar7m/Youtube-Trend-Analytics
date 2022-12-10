@@ -8,8 +8,6 @@ matplotlib
 seaborn
 sklearn 
 regex
-warnings
-regex
 PIL
 wordcloud
 matplotlib
