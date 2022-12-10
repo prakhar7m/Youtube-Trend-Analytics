@@ -6,3 +6,4 @@ scipy==1.6.2
 click==8
 matplotlib
 seaborn
+pickle
