@@ -1,20 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import scipy.stats
-from scipy.stats import norm
 import altair as alt
 import pickle
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 #import warnings
-from sklearn.model_selection import cross_val_score, RepeatedKFold
-from sklearn.linear_model import Ridge, Lasso, LinearRegression
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import GradientBoostingRegressor, BaggingRegressor, RandomForestRegressor, StackingRegressor
-from xgboost import XGBRegressor
-from lightgbm import LGBMRegressor
+
 
 st.set_page_config(
     page_title="YouTube Trend Analytics", page_icon="📊", initial_sidebar_state="expanded"
