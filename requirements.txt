@@ -6,7 +6,7 @@ scipy==1.6.2
 click==8
 matplotlib
 seaborn
-sklearn 
+scikit-learn 
 regex
 PIL
 wordcloud
