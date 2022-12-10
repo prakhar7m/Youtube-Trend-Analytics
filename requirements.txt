@@ -7,14 +7,4 @@ click==8
 matplotlib
 seaborn
 pickle==4.0
-sklearn 
-regex
-warnings
-regex
-PIL
-wordcloud
-matplotlib
-nltk
-plotly.express
-lightgbm
-xgboost
+
